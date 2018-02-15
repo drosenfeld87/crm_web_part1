@@ -11,11 +11,14 @@
         <ul class="nav">
           <li><a href="/">Home</a></li>
           <li><a href="/Add a Contact/">Add a Contact</a></li>
-          <li><a href="/About/">About</a></li>
+          <li><a href="/aboutme/">About</a></li>
         </ul>
-
-    <main>
-      <%= yield %>
-    </main>
+      <main>
+        <div class = "num_of_contacts_bar">
+          <p>There are 5 Contacts</p>
+        </div>
+        <%= yield %>
+      </main>
+      <footer>© Bitmaker 2016</footer>
   </body>
 </html>
