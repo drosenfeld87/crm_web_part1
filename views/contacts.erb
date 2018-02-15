@@ -1,6 +1,9 @@
 
 <% @contacts.each do |contact| %>
-    <p class = "contacts"> <%= contact.first_name %> <%= contact.last_name %> <%= contact.email%></p>
+    <div class = 'bkg_color'>
+      <p class = "contacts"> <%= contact.first_name %> <%= contact.last_name %> <%= contact.email %></p>
+      <p class = "edit_delete"><a href="#">Edit</a> | <a href="#">Delete</a></p>
+    </div>
   <% end %>
 
   <!-- <% @contacts.each do |contact| %>
