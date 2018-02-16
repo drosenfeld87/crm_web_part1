@@ -3,11 +3,7 @@
 </div>
 <% @contacts.each do |contact| %>
     <div class = 'bkg_color'>
-      <p class = "contacts"> <%= contact.first_name %> <%= contact.last_name %> <%= contact.email %></p>
+      <p class = "contacts"><a href="/contacts/<%= contact.id %>"><%= contact.first_name %> <%= contact.last_name %> <%= contact.email %></a></p>
       <p class = "edit_delete"><a href="#">Edit</a> | <a href="#">Delete</a></p>
     </div>
   <% end %>
-
-  <!-- <% @contacts.each do |contact| %>
-      <p> <%= contact.first_name %> <%= contact.last_name %> <%= contact.email%> <%=contact.note%></p>
-    <% end %> -->

@@ -15,16 +15,13 @@ end
 
 get '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
-  erb :show_contact
-end
+    if @contact
+      erb :show_contact
+    else
+      raise Sinatra::NotFound
+    end
+  end
 
-
-
-# get '/contacts' do
-#   @contacts = Contact.all
-#
-#   erb :contacts
-# end
 
 get '/aboutme' do
     @skills = ['graphic design', 'css', 'html']
