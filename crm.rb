@@ -67,10 +67,11 @@ require 'sinatra'
   end
 
 
-  delete '/contacts/:id' do
+  delete '/contacts/:id/delete' do
     @contact = Contact.find_by(params[:id].to_i)
     if @contact
-      @contact.delete
+      # @contact.delete
+      erb :delete_contact
       redirect to('/contacts')
     else
       raise Sinatra::NotFound

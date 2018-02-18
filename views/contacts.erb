@@ -4,6 +4,6 @@
 <% @contacts.each do |contact| %>
     <div class = 'bkg_color'>
       <p class = "contacts"><a href="/contacts/<%= contact.id %>"><%= contact.first_name %> <%= contact.last_name %> <%= contact.email %></a></p>
-      <p class = "edit_delete"><a href='/contacts/:id/edit'>Edit</a> | <a href="#">Delete</a></p>
+      <p class = "edit_delete"><a href="/new">Edit</a> | <a href="#">Delete</a></p>
     </div>
   <% end %>
