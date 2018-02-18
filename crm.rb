@@ -22,11 +22,13 @@ get '/contacts/:id' do
     end
   end
 
+get '/new' do
+  erb :new
+end
 
 get '/aboutme' do
     @skills = ['graphic design', 'css', 'html']
     @interests = ['reading', 'art', 'music']
-
     erb :aboutme
   end
 
