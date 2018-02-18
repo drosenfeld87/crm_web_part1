@@ -18,15 +18,12 @@ class Contact < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+
+  def delete_contact
+    
+  end
+
+
 end
 
 Contact.auto_upgrade!
-
-
-# new_contact1 = Contact.create('Deb', 'Rosenfeld', 'drosenfeld87@gmail.com', 'likes_cats',)
-# new_contact2 = Contact.create('Devin', 'McCoy', 'devingmccoy@gmail.com', 'likes_gaming')
-# new_contact3 = Contact.create('Meg', 'Pesant', 'megan@meganpesant.com', 'likes_photography')
-
-# n= Contact.full_name(first_name, last_name)
-# pp n
-# p new_contact2.update('first_name','Dev')
