@@ -1,19 +1,19 @@
 require_relative 'contact'
 require 'sinatra'
 
-get '/' do
-  @contacts = Contact.all
-  erb :contacts
-end
+  get '/' do
+    @contacts = Contact.all
+    erb :contacts
+  end
 
 
-get '/contacts' do
-  @contacts = Contact.all
-  erb :contacts
-end
+  get '/contacts' do
+    @contacts = Contact.all
+    erb :contacts
+  end
 
 
-get '/contacts/:id' do
+  get '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
     if @contact
       erb :show_contact
@@ -22,14 +22,24 @@ get '/contacts/:id' do
     end
   end
 
-get '/new' do
-  erb :new
-end
+  get '/new' do
+    erb :new
+  end
 
-get '/aboutme' do
+  get '/aboutme' do
     @skills = ['graphic design', 'css', 'html']
     @interests = ['reading', 'art', 'music']
     erb :aboutme
+  end
+
+  post '/contacts' do
+  Contact.create(
+    first_name: params[:first_name],
+    last_name:  params[:last_name],
+    email:      params[:email],
+    note:       params[:note]
+  )
+  redirect to('/contacts')
   end
 
 after do
