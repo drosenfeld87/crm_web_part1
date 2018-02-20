@@ -6,8 +6,9 @@
     <div class = 'bkg_color'>
       <p class = "contacts"><a href="/contacts/<%= contact.id %>"><%= contact.first_name %> <%= contact.last_name %> <%= contact.email %></a></p>
     </div>
-    <div class = "edit_delete">
-      <a href="/contacts/<%= contact.id %>/edit"><button type="submit"><span>Edit</span></button></a> | <form class="delete_contact" action="/contacts/<%= contact.id %>" method="post"><input type='hidden' name='_method' value='delete'><button type="submit"><span>Delete</span></button>
+    <div class = 'bkg_color'>
+      <a href="/contacts/<%= contact.id %>/edit"><button type="submit"><span>Edit</span></button></a> |
+      <form class="delete_contact" action="/contacts/<%= contact.id %>" method="post"><input type='hidden' name='_method' value='delete'><button type="submit"><span>Delete</span></button>
       </form>
     </div>
   <% end %>

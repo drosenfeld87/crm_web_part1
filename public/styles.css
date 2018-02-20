@@ -45,6 +45,12 @@ main {
   margin: 20px;
 }
 
+.edit_delete {
+  background-color: turquoise
+  padding: 20px;
+  height: 20px;
+}
+
 .bkg_color {
   background-color: turquoise;
 
@@ -55,12 +61,6 @@ main {
   font-weight: bolder;
 }
 
-.edit_delete {
-  padding: 20px;
-  background-color: turquoise;
-  display: inline-block;
-
-}
 
 footer {
     background-color: black;
