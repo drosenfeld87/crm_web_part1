@@ -46,9 +46,14 @@ main {
 }
 
 .edit_delete {
-  background-color: turquoise
-  padding: 20px;
+  margin: 0px 0px 0px 20px;
   height: 20px;
+}
+
+
+.delete_contact {
+  display: inline-block;
+  margin: 0px 0px 10px 3px;
 }
 
 .bkg_color {
