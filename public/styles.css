@@ -56,8 +56,10 @@ main {
 }
 
 .edit_delete {
-  font-size: 12px;
   padding: 20px;
+  background-color: turquoise;
+  display: inline-block;
+
 }
 
 footer {
